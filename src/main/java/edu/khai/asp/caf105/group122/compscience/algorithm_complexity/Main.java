@@ -1,8 +1,11 @@
 package edu.khai.asp.caf105.group122.compscience.algorithm_complexity;
 
+import edu.khai.asp.caf105.group122.compscience.algorithm_complexity.algortypm.BinarySort;
 import edu.khai.asp.caf105.group122.compscience.algorithm_complexity.algortypm.BubbleSort;
 import edu.khai.asp.caf105.group122.compscience.algorithm_complexity.algortypm.GnomeSort;
+import edu.khai.asp.caf105.group122.compscience.algorithm_complexity.algortypm.HeapSort;
 import edu.khai.asp.caf105.group122.compscience.algorithm_complexity.algortypm.InsertionSort;
+import edu.khai.asp.caf105.group122.compscience.algorithm_complexity.algortypm.IntroSort;
 import edu.khai.asp.caf105.group122.compscience.algorithm_complexity.algortypm.JavaSystem;
 import edu.khai.asp.caf105.group122.compscience.algorithm_complexity.algortypm.MergeSort;
 import edu.khai.asp.caf105.group122.compscience.algorithm_complexity.algortypm.QuickSort;
@@ -10,7 +13,6 @@ import edu.khai.asp.caf105.group122.compscience.algorithm_complexity.algortypm.S
 import edu.khai.asp.caf105.group122.compscience.algorithm_complexity.algortypm.ShellSort;
 import edu.khai.asp.caf105.group122.compscience.algorithm_complexity.algortypm.SortAlgorithm;
 
-import java.io.IOException;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.Arrays;
@@ -20,7 +22,7 @@ public class Main {
 
     static Random rand = new Random();
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         var sizes = new int[]{
                 2_500,
                 2_500,
@@ -44,10 +46,13 @@ public class Main {
 
         var algos = new SortAlgorithm[]{
                 new BubbleSort(),
-                new SelectionSort(),
-                new MergeSort(),
-                new InsertionSort(),
                 new GnomeSort(),
+                new SelectionSort(),
+                new BinarySort(),
+                new InsertionSort(),
+                new MergeSort(),
+                new HeapSort(),
+                new IntroSort(),
                 new ShellSort(),
                 new QuickSort(),
                 new JavaSystem()};

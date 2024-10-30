@@ -1,8 +1,11 @@
 package edu.khai.asp.caf105.group122.compscience.algorithm_complexity;
 
+import edu.khai.asp.caf105.group122.compscience.algorithm_complexity.algortypm.BinarySort;
 import edu.khai.asp.caf105.group122.compscience.algorithm_complexity.algortypm.BubbleSort;
 import edu.khai.asp.caf105.group122.compscience.algorithm_complexity.algortypm.GnomeSort;
+import edu.khai.asp.caf105.group122.compscience.algorithm_complexity.algortypm.HeapSort;
 import edu.khai.asp.caf105.group122.compscience.algorithm_complexity.algortypm.InsertionSort;
+import edu.khai.asp.caf105.group122.compscience.algorithm_complexity.algortypm.IntroSort;
 import edu.khai.asp.caf105.group122.compscience.algorithm_complexity.algortypm.JavaSystem;
 import edu.khai.asp.caf105.group122.compscience.algorithm_complexity.algortypm.MergeSort;
 import edu.khai.asp.caf105.group122.compscience.algorithm_complexity.algortypm.QuickSort;
@@ -24,15 +27,17 @@ public class ExecutionPlan {
     int[] array = randomDataAsArray(55000);
     int[] sortedArray = new int[55000];
 
-    SortAlgorithm[] algos = new SortAlgorithm[]{
-            new BubbleSort(),
-            new SelectionSort(),
-            new MergeSort(),
-            new InsertionSort(),
-            new GnomeSort(),
-            new ShellSort(),
-            new QuickSort(),
-            new JavaSystem()};
+    SortAlgorithm buble = new BubbleSort();
+    SortAlgorithm selection = new SelectionSort();
+    SortAlgorithm quick = new QuickSort();
+    SortAlgorithm merge = new MergeSort();
+    SortAlgorithm insertion = new InsertionSort();
+    SortAlgorithm shell = new ShellSort();
+    SortAlgorithm java = new JavaSystem();
+    SortAlgorithm gnome = new GnomeSort();
+    SortAlgorithm heap = new HeapSort();
+    SortAlgorithm intro = new IntroSort();
+    SortAlgorithm binary = new BinarySort();
 
     @Param({ "1000", "2000", "3000", "5000", "8000", "13000", "21000", "34000", "55000" })
     public int samples;
@@ -47,10 +52,6 @@ public class ExecutionPlan {
             integers[i] = rand.nextInt(Integer.MAX_VALUE);
         }
         return integers;
-    }
-
-    public SortAlgorithm getAlgorithm(int i) {
-        return algos[i];
     }
 
     @Setup(Level.Iteration)

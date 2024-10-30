@@ -21,42 +21,57 @@ public class BM {
 
     @Benchmark
     public void BubbleSort(ExecutionPlan executionPlan) {
-        executionPlan.getAlgorithm(0).sort(executionPlan.sortedArray, executionPlan.samples);
+        executionPlan.buble.sort(executionPlan.sortedArray, executionPlan.samples);
     }
 
     @Benchmark
     public void SelectionSort(ExecutionPlan executionPlan) {
-        executionPlan.getAlgorithm(1).sort(executionPlan.sortedArray, executionPlan.samples);
+        executionPlan.selection.sort(executionPlan.sortedArray, executionPlan.samples);
     }
 
     @Benchmark
     public void MergeSort(ExecutionPlan executionPlan) {
-        executionPlan.getAlgorithm(2).sort(executionPlan.sortedArray, executionPlan.samples);
+        executionPlan.merge.sort(executionPlan.sortedArray, executionPlan.samples);
     }
 
     @Benchmark
     public void InsertionSort(ExecutionPlan executionPlan) {
-        executionPlan.getAlgorithm(3).sort(executionPlan.sortedArray, executionPlan.samples);
+        executionPlan.insertion.sort(executionPlan.sortedArray, executionPlan.samples);
     }
 
     @Benchmark
     public void GnomeSort(ExecutionPlan executionPlan) {
-        executionPlan.getAlgorithm(4).sort(executionPlan.sortedArray, executionPlan.samples);
+        executionPlan.gnome.sort(executionPlan.sortedArray, executionPlan.samples);
     }
 
     @Benchmark
     public void ShellSort(ExecutionPlan executionPlan) {
-        executionPlan.getAlgorithm(5).sort(executionPlan.sortedArray, executionPlan.samples);
+        executionPlan.shell.sort(executionPlan.sortedArray, executionPlan.samples);
     }
 
     @Benchmark
     public void QuickSort(ExecutionPlan executionPlan) {
-        executionPlan.getAlgorithm(6).sort(executionPlan.sortedArray, executionPlan.samples);
+        executionPlan.quick.sort(executionPlan.sortedArray, executionPlan.samples);
     }
 
     @Benchmark
     public void JavaSystem(ExecutionPlan executionPlan) {
-        executionPlan.getAlgorithm(7).sort(executionPlan.sortedArray, executionPlan.samples);
+        executionPlan.java.sort(executionPlan.sortedArray, executionPlan.samples);
+    }
+
+    @Benchmark
+    public void HeapSort(ExecutionPlan executionPlan) {
+        executionPlan.heap.sort(executionPlan.sortedArray, executionPlan.samples);
+    }
+
+    @Benchmark
+    public void IntroSort(ExecutionPlan executionPlan) {
+        executionPlan.intro.sort(executionPlan.sortedArray, executionPlan.samples);
+    }
+
+    @Benchmark
+    public void BinarySort(ExecutionPlan executionPlan) {
+        executionPlan.binary.sort(executionPlan.sortedArray, executionPlan.samples);
     }
 
 }
